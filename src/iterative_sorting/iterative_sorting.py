@@ -1,30 +1,35 @@
-# TO-DO: Complete the selection_sort() function below 
-def selection_sort( arr ):
-    # loop through n-1 elements
-    for i in range(0, len(arr) - 1):
-        cur_index = i
-        smallest_index = cur_index
-        # TO-DO: find next smallest element
-        # (hint, can do in 3 loc) 
-             
+# # TO-DO: Complete the selection_sort() function below
+# def selection_sort(arr):
+#     # loop through n-1 elements
+#     for i in range(0, len(arr) - 1):
+#         cur_index = i
+#         smallest_index = cur_index
+#         # TO-DO: find next smallest element
+#         # (hint, can do in 3 loc)
 
+#         # TO-DO: swap
 
-
-        # TO-DO: swap
-
-
-
-
-    return arr
+#     return arr
 
 
 # TO-DO:  implement the Bubble Sort function below
-def bubble_sort( arr ):
 
+# [4, 10, 8, 2, 12, 6]
+# Funny enough, the bubble sort method is something I learned when we were going through JS for the first time. When we weren't allowed to use the .sort() method, this is what I had done
+def bubble_sort(arr):
+    for number in range(len(arr)-1):
+        for unsorted in range(len(arr)-1):
+            if arr[unsorted] > arr[unsorted + 1]:
+                temp = arr[unsorted + 1]
+                arr[unsorted + 1] = arr[unsorted]
+                arr[unsorted] = temp
     return arr
 
 
-# STRETCH: implement the Count Sort function below
-def count_sort( arr, maximum=-1 ):
+print(bubble_sort([4, 10, 8, 2, 12, 6]))
 
-    return arr
+
+# # STRETCH: implement the Count Sort function below
+# def count_sort(arr, maximum=-1):
+
+#     return arr
